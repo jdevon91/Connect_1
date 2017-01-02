@@ -133,13 +133,24 @@
                                     <action selector="meterConnectBackButtonPressed:" destination="YHc-L6-fgf" eventType="touchUpInside" id="pHg-vt-fpL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swz-vR-vA4">
+                                <rect key="frame" x="20" y="73" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="LD5-j2-4Be"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pJD-R7-rMs" firstAttribute="top" secondItem="Q32-Wm-XF7" secondAttribute="bottom" constant="8" id="8PC-f6-Mln"/>
+                            <constraint firstItem="swz-vR-vA4" firstAttribute="top" secondItem="E1h-A9-2OT" secondAttribute="bottom" constant="8" id="OQW-3K-kj4"/>
                             <constraint firstItem="Q32-Wm-XF7" firstAttribute="leading" secondItem="xTe-ba-rMD" secondAttribute="leadingMargin" id="XAw-t4-1N9"/>
                             <constraint firstItem="E1h-A9-2OT" firstAttribute="leading" secondItem="xTe-ba-rMD" secondAttribute="leadingMargin" id="bds-S7-cmQ"/>
                             <constraint firstItem="E1h-A9-2OT" firstAttribute="top" secondItem="bda-Rm-USe" secondAttribute="bottom" constant="18" id="gdb-Ie-VXf"/>
+                            <constraint firstItem="swz-vR-vA4" firstAttribute="leading" secondItem="xTe-ba-rMD" secondAttribute="leadingMargin" id="kdS-ff-gNV"/>
                         </constraints>
                     </view>
                     <connections>

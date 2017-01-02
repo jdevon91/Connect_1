@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class MeterConnect: UIViewController {
+    
+    
     @IBOutlet weak var meterName: UILabel!
     @IBAction func meterConnectBackButtonPressed(_ sender: Any) {
 
@@ -16,6 +19,7 @@ class MeterConnect: UIViewController {
     }
    
     private var _currentMeter: String!//local variable for current meter
+    var currentMeter_2: CurrentMeterData!
     
     // get\ set
     var currentMeter: String {
@@ -25,12 +29,14 @@ class MeterConnect: UIViewController {
             _currentMeter = newValue
         }
     }
-
+var currentMeterData = CurrentMeterData()
     override func viewDidLoad() {
         super.viewDidLoad()
         meterName.text = _currentMeter
+        currentMeterData.downloadMeterDetails {
+            //setupUI
+        }
+               }
+       }
 
-    }
-
-    }
 
