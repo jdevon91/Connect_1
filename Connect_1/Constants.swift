@@ -16,4 +16,6 @@ let LONGITUDE = "&lon="
 
 typealias DownloadComplete = () -> ()// type alias for the download complete call in CurrentMeterData
 
-let CURRENT_METER_URL = "http://connect.medeng.com/mostrecentrecord.php"
+let CURRENT_METER_URL = "http://connect.medeng.com/mostrecentrecord2.php"
+
+//http://connect.medeng.com/mostrecentrecord.php

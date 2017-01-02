@@ -13,7 +13,7 @@ import UIKit
 class CurrentMeterData {
     var _Meter_ID: String!
     var _Timestamp: CVTimeStamp!
-    var _Test_Number: Int!
+    var _Test_ID: String!
     var _Poll_Freq: Int!
     var _Test_Control: Int!
     var _Current_WC: Float32!
@@ -40,7 +40,7 @@ class CurrentMeterData {
     
     var Meter_ID: String {
         if _Meter_ID == nil {
-            _Meter_ID = ""
+            _Meter_ID = "Error"
         }
         return _Meter_ID
     }
@@ -53,11 +53,11 @@ class CurrentMeterData {
         return _Timestamp
     }
     
-    var Test_Number: Int {
-        if _Test_Number == nil {
-            _Test_Number = 0
+    var Test_ID: String {
+        if _Test_ID == nil {
+            _Test_ID = "Error"
         }
-        return _Test_Number
+        return _Test_ID
     }
     
     var Poll_Freq: Int {
@@ -215,8 +215,21 @@ class CurrentMeterData {
         let currentMeterURL = URL(string: CURRENT_METER_URL)!
         Alamofire.request(currentMeterURL).responseJSON{ response in
             let result = response.result
-            print(response)
+
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                
+                if let MId = dict["Meter_ID"] as? String {
+                    self._Meter_ID = MId
+                    print(self.Meter_ID)
+                }
+                
+                if let t_Id = dict["Test_ID"] as? String {
+                    self._Test_ID = t_Id
+                    print(self.Test_ID)
+                }
             }
-        completed()
+            print(response)
+            completed()
+        }
     }
 }

@@ -154,6 +154,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MeterID" destination="swz-vR-vA4" id="PYf-RG-kHj"/>
                         <outlet property="meterName" destination="E1h-A9-2OT" id="LjL-R4-8DQ"/>
                     </connections>
                 </viewController>
