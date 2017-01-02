@@ -68,12 +68,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU7-cJ-Jm9">
                                 <rect key="frame" x="20" y="95" width="59" height="30"/>
                                 <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="ConnectPushed:" destination="NAo-V4-fa7" eventType="touchUpInside" id="jyn-xx-zbK"/>
+                                    <segue destination="YHc-L6-fgf" kind="showDetail" identifier="toMeterConnect" action="showViewController:sender:" id="Sme-Xz-b9h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0C-wE-ZiK">
                                 <rect key="frame" x="20" y="698" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="HOC-lF-wtO"/>
+                                    <action selector="MeterIdBackButtonPressed:" destination="NAo-V4-fa7" eventType="touchUpInside" id="P4r-8Y-So9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,12 +113,42 @@
                     <view key="view" contentMode="scaleToFill" id="xTe-ba-rMD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Meter Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1h-A9-2OT">
+                                <rect key="frame" x="20" y="38" width="374" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="DD3-l1-Fcq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q32-Wm-XF7">
+                                <rect key="frame" x="20" y="698" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JBc-Ln-8dv"/>
+                                </constraints>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="meterConnectBackButtonPressed:" destination="YHc-L6-fgf" eventType="touchUpInside" id="pHg-vt-fpL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pJD-R7-rMs" firstAttribute="top" secondItem="Q32-Wm-XF7" secondAttribute="bottom" constant="8" id="8PC-f6-Mln"/>
+                            <constraint firstItem="Q32-Wm-XF7" firstAttribute="leading" secondItem="xTe-ba-rMD" secondAttribute="leadingMargin" id="XAw-t4-1N9"/>
+                            <constraint firstItem="E1h-A9-2OT" firstAttribute="leading" secondItem="xTe-ba-rMD" secondAttribute="leadingMargin" id="bds-S7-cmQ"/>
+                            <constraint firstItem="E1h-A9-2OT" firstAttribute="top" secondItem="bda-Rm-USe" secondAttribute="bottom" constant="18" id="gdb-Ie-VXf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="meterName" destination="E1h-A9-2OT" id="LjL-R4-8DQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJj-vx-svW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1787" y="139"/>
+            <point key="canvasLocation" x="1840.5797101449277" y="142.66304347826087"/>
         </scene>
     </scenes>
 </document>

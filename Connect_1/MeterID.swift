@@ -10,27 +10,41 @@ import UIKit
 
 class MeterID: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var TextEntry: UITextField!
+    @IBAction func ConnectPushed(_ sender: Any) {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-self.TextEntry.delegate = self
-        // Do any additional setup after loading the view.
+        //passing textfield to a string then passing the string through segue
+        let UserEnteredMeterID: String = TextEntry.text!
+        performSegue(withIdentifier: "toMeterConnect", sender: UserEnteredMeterID)
+        
+}
+    //caching the user entered meter ID variable to be sent to the Meter Connect View Controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? MeterConnect {
+            if let sentName = sender as? String {
+                destination.currentMeter = sentName
+            }
+        }
     }
+    @IBAction func MeterIdBackButtonPressed(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil) // kills the current view controller
+    
+    }
+    
     //Hide keyboard when user touches outside keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     //Hide keyboard when user hits return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return (true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-       
-    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+  
+self.TextEntry.delegate = self
     
-
-
+}
 }

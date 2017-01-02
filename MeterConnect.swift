@@ -9,27 +9,28 @@
 import UIKit
 
 class MeterConnect: UIViewController {
+    @IBOutlet weak var meterName: UILabel!
+    @IBAction func meterConnectBackButtonPressed(_ sender: Any) {
+
+            dismiss(animated: true, completion: nil) // kills the current view controller
+    }
+   
+    private var _currentMeter: String!//local variable for current meter
+    
+    // get\ set
+    var currentMeter: String {
+        get {
+            return _currentMeter
+        } set {
+            _currentMeter = newValue
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        meterName.text = _currentMeter
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
