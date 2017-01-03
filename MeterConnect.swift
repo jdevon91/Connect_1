@@ -45,14 +45,19 @@ class MeterConnect: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-   
-        currentMeter_2 = CurrentMeterData()
-        currentMeter_2.downloadMeterDetails {
-    self.updateMeterConnectUI() // calling update UI function
+        
+        currentMeter_2 = CurrentMeterData()//init class
+        //using the timer fucntion to loop call
+        Timer.scheduledTimer(withTimeInterval: 1.0,repeats: true) {
+            timer in
+            
+            self.currentMeter_2.downloadMeterDetails {
+            self.updateMeterConnectUI() // calling update UI function
+                
+            }
+
         }
-        
-        meterName.text = _currentMeter
-        
+                    meterName.text = _currentMeter
     }
     //created a function to update the UI
     func updateMeterConnectUI() {
