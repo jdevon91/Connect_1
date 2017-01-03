@@ -16,6 +16,20 @@ class MeterConnect: UIViewController {
             dismiss(animated: true, completion: nil) // kills the current view controller
     }
     @IBOutlet weak var MeterID: UILabel!
+    @IBOutlet weak var Timestamp: UILabel!
+    @IBOutlet weak var TestNumber: UILabel!
+    @IBOutlet weak var PollFrequency: UILabel!
+    @IBOutlet weak var TestControlStatus: UILabel!
+    @IBOutlet weak var WaterCut: UILabel!
+    @IBOutlet weak var GVF: UILabel!
+    @IBOutlet weak var CurrentOilRate: UILabel!
+    @IBOutlet weak var CurrentWaterRate: UILabel!
+    @IBOutlet weak var CurrentGasRate: UILabel!
+    @IBOutlet weak var Test_AVG_WC: UILabel!
+    @IBOutlet weak var Test_AVG_GVF: UILabel!
+    @IBOutlet weak var Cum_Oil: UILabel!
+    @IBOutlet weak var Cum_Water: UILabel!
+    @IBOutlet weak var Cum_Gas: UILabel!
    
     private var _currentMeter: String!//local variable for current meter
     var currentMeter_2: CurrentMeterData!
@@ -42,7 +56,37 @@ class MeterConnect: UIViewController {
     }
     //created a function to update the UI
     func updateMeterConnectUI() {
+        
         MeterID.text = currentMeter_2.Meter_ID
+        
+        Timestamp.text = currentMeter_2.Timestamp
+        
+        TestNumber.text = currentMeter_2.Test_ID
+        
+        PollFrequency.text = currentMeter_2.Poll_Freq
+        
+        TestControlStatus.text = currentMeter_2.Test_Control
+        
+        WaterCut.text = currentMeter_2.Current_WC
+        
+        GVF.text = currentMeter_2.Current_GVF
+        
+        CurrentOilRate.text = currentMeter_2.Current_Oil_Rate
+        
+        CurrentWaterRate.text = currentMeter_2.Current_Water_Rate
+        
+        CurrentGasRate.text = currentMeter_2.Current_Gas_Rate
+        
+        Test_AVG_WC.text = currentMeter_2.Test_AVG_WC
+        
+        Test_AVG_GVF.text = currentMeter_2.Test_AVG_GVF
+        
+        Cum_Oil.text = currentMeter_2.Test_Cummulative_Oil
+        
+        Cum_Water.text = currentMeter_2.Test_Cummulative_Water
+        
+        Cum_Gas.text = currentMeter_2.Test_Cummulative_Gas
+        
     }
 
 }
