@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		881D4F861E1A2A96004CB6FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F851E1A2A96004CB6FD /* Constants.swift */; };
 		881D4F881E1A2F00004CB6FD /* CurrentMeterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */; };
+		881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F8D1E1C6CC9004CB6FD /* TestController.swift */; };
 		88B25AFB1E132814003BD1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B25AFA1E132814003BD1D1 /* AppDelegate.swift */; };
 		88B25AFD1E132814003BD1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B25AFC1E132814003BD1D1 /* ViewController.swift */; };
 		88B25B001E132814003BD1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B25AFE1E132814003BD1D1 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		46A8E51E3564BD8D43EAC1CA /* Pods_Connect_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Connect_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		881D4F851E1A2A96004CB6FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMeterData.swift; sourceTree = "<group>"; };
+		881D4F8D1E1C6CC9004CB6FD /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		88B25AF71E132814003BD1D1 /* Connect_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connect_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B25AFA1E132814003BD1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B25AFC1E132814003BD1D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				88B25AFC1E132814003BD1D1 /* ViewController.swift */,
 				88B25B0F1E13283F003BD1D1 /* MeterID.swift */,
 				88FDF3521E132CE60099580E /* MeterConnect.swift */,
+				881D4F8D1E1C6CC9004CB6FD /* TestController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				88B25B031E132815003BD1D1 /* Connect_1.xcdatamodeld in Sources */,
 				88B25AFD1E132814003BD1D1 /* ViewController.swift in Sources */,
 				88B25B101E13283F003BD1D1 /* MeterID.swift in Sources */,
+				881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */,
 				88B25AFB1E132814003BD1D1 /* AppDelegate.swift in Sources */,
 				88FDF3531E132CE60099580E /* MeterConnect.swift in Sources */,
 				881D4F881E1A2F00004CB6FD /* CurrentMeterData.swift in Sources */,

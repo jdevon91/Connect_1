@@ -30,6 +30,15 @@ class MeterConnect: UIViewController {
     @IBOutlet weak var Cum_Oil: UILabel!
     @IBOutlet weak var Cum_Water: UILabel!
     @IBOutlet weak var Cum_Gas: UILabel!
+    @IBAction func NewTestButton(_ sender: Any) {
+        //passing meter ID to a string then passing the string through segue, this is also just segue control
+        let LabelMeterID: String = MeterID.text!
+        performSegue(withIdentifier: "toTestController", sender: LabelMeterID)
+
+    }
+    @IBAction func stopTestButton(_ sender: Any) {
+        Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(TestNumber.text!)", method: .get)// get request to stop test.
+    }
    
     private var _currentMeter: String!//local variable for current meter
     var currentMeter_2: CurrentMeterData!
