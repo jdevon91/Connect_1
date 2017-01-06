@@ -23,9 +23,9 @@ class CurrentMeterData {
     var _Current_Gas_Rate: String!
     var _Test_AVG_WC: String!
     var _Test_AVG_GVF: String!
-    var _Test_Cummulative_Oil: String!
-    var _Test_Cummulative_Water: String!
-    var _Test_Cummulative_Gas: String!
+    var _Test_Cumulative_Oil: String!
+    var _Test_Cumulative_Water: String!
+    var _Test_Cumulative_Gas: String!
     var _DP1: String!
     var _DP2: String!
     var _DP3: String!
@@ -47,7 +47,7 @@ class CurrentMeterData {
     
     var Timestamp: String {
         if _Timestamp == nil {
-            //_Timestamp =
+        _Timestamp = "Error"
         }
         
         return _Timestamp
@@ -123,25 +123,25 @@ class CurrentMeterData {
         return _Test_AVG_GVF
     }
     
-    var Test_Cummulative_Oil: String {
-        if _Test_Cummulative_Oil == nil {
-            _Test_Cummulative_Oil = "Error"
+    var Test_Cumulative_Oil: String {
+        if _Test_Cumulative_Oil == nil {
+            _Test_Cumulative_Oil = "Error"
         }
-        return _Test_Cummulative_Oil
+        return _Test_Cumulative_Oil
     }
     
-    var Test_Cummulative_Water: String {
-        if _Test_Cummulative_Water == nil {
-            _Test_Cummulative_Water = "Error"
+    var Test_Cumulative_Water: String {
+        if _Test_Cumulative_Water == nil {
+            _Test_Cumulative_Water = "Error"
         }
-        return _Test_Cummulative_Water
+        return _Test_Cumulative_Water
     }
     
-    var Test_Cummulative_Gas: String {
-        if _Test_Cummulative_Gas == nil {
-            _Test_Cummulative_Gas = "Error"
+    var Test_Cumulative_Gas: String {
+        if _Test_Cumulative_Gas == nil {
+            _Test_Cumulative_Gas = "Error"
         }
-        return _Test_Cummulative_Gas
+        return _Test_Cumulative_Gas
     }
     
     var DP1: String {
@@ -278,19 +278,19 @@ class CurrentMeterData {
                     print(self.Test_AVG_GVF)
                 }
                 
-                if let cum_oil = dict["Test_Cummulateive_Oil"] as? String {
-                    self._Test_Cummulative_Oil = cum_oil
-                    print(self.Test_Cummulative_Oil)
+                if let cum_oil = dict["Test_Cumulative_Oil"] as? String {
+                    self._Test_Cumulative_Oil = cum_oil
+                    print(self.Test_Cumulative_Oil)
                 }
                 
-                if let cum_water = dict["Test_Cummulative_Water"] as? String {
-                    self._Test_Cummulative_Water = cum_water
-                    print(self.Test_Cummulative_Water)
+                if let cum_water = dict["Test_Cumulative_Water"] as? String {
+                    self._Test_Cumulative_Water = cum_water
+                    print(self.Test_Cumulative_Water)
                 }
                 
-                if let cum_gas = dict["Test_Cummulative_Gas"] as? String {
-                    self._Test_Cummulative_Gas = cum_gas
-                    print(self.Test_Cummulative_Gas)
+                if let cum_gas = dict["Test_Cumulative_Gas"] as? String {
+                    self._Test_Cumulative_Gas = cum_gas
+                    print(self.Test_Cumulative_Gas)
                 }
             }
             print(response)

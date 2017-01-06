@@ -36,8 +36,28 @@ class MeterConnect: UIViewController {
         performSegue(withIdentifier: "toTestController", sender: LabelMeterID)
 
     }
-    @IBAction func stopTestButton(_ sender: Any) {
-        Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(TestNumber.text!)", method: .get)// get request to stop test.
+    @IBAction func stopTestButton(_ sender: UIButton) {
+        // create the alert
+        let alert = UIAlertController(title: "End Current Test?", message: "Note: The application will email test results to the address given at the start of the test.", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add the actions (buttons)
+        alert.addAction(UIAlertAction(title: "Stop Test", style: UIAlertActionStyle.default, handler: { action in
+            
+            // get request to stop test.
+           Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(self.TestNumber.text!)", method: .get)
+            }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Stop Test & Email Report", style: UIAlertActionStyle.default, handler: { action in
+            
+            // get request to stop test.
+            Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(self.TestNumber.text!)", method: .get)
+            
+            // get request to send test report via email.
+            Alamofire.request("http://connect.medeng.com/emailtest.php?testid=\(self.TestNumber.text!)", method: .get)
+        }))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
    
     private var _currentMeter: String!//local variable for current meter
@@ -95,11 +115,11 @@ class MeterConnect: UIViewController {
         
         Test_AVG_GVF.text = currentMeter_2.Test_AVG_GVF
         
-        Cum_Oil.text = currentMeter_2.Test_Cummulative_Oil
+        Cum_Oil.text = currentMeter_2.Test_Cumulative_Oil
         
-        Cum_Water.text = currentMeter_2.Test_Cummulative_Water
+        Cum_Water.text = currentMeter_2.Test_Cumulative_Water
         
-        Cum_Gas.text = currentMeter_2.Test_Cummulative_Gas
+        Cum_Gas.text = currentMeter_2.Test_Cumulative_Gas
         
     }
 
