@@ -47,7 +47,7 @@ class CurrentMeterData {
     
     var Timestamp: String {
         if _Timestamp == nil {
-        _Timestamp = "Error"
+        _Timestamp = "Meter not found."
         }
         
         return _Timestamp

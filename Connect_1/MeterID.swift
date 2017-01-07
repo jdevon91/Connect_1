@@ -7,24 +7,21 @@
 //
 
 import UIKit
+import Alamofire
 
 class MeterID: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var TextEntry: UITextField!
     @IBAction func ConnectPushed(_ sender: Any) {
 
         //passing textfield to a string then passing the string through segue
         let UserEnteredMeterID: String = TextEntry.text!
+        let callFromConstants = Constants()
+        callFromConstants.updateMeterUrl(meter_url: UserEnteredMeterID)
         performSegue(withIdentifier: "toMeterConnect", sender: UserEnteredMeterID)
+        Alamofire.request("http://connect.medeng.com/standby.php?meter=\(self.TextEntry.text!)")
         
 }
-    //caching the user entered meter ID variable to be sent to the Meter Connect View Controller
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? MeterConnect {
-            if let sentName = sender as? String {
-                destination.currentMeter = sentName
-            }
-        }
-    }
     @IBAction func MeterIdBackButtonPressed(_ sender: Any) {
         
         dismiss(animated: true, completion: nil) // kills the current view controller

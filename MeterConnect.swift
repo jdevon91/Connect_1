@@ -12,10 +12,12 @@ import Alamofire
 class MeterConnect: UIViewController {
     @IBOutlet weak var meterName: UILabel!
     @IBAction func meterConnectBackButtonPressed(_ sender: Any) {
-
-            dismiss(animated: true, completion: nil) // kills the current view controller
+        var testing = MeterID.text
+        Alamofire.request("http://connect.medeng.com/disconnect.php?meter=" + testing!)
+        //Alamofire.request("http://connect.medeng.com/disconnect.php?meter=2", method: .get )
+        dismiss(animated: true, completion: nil) // kills the current view controller
     }
-    @IBOutlet weak var MeterID: UILabel!
+      @IBOutlet weak var MeterID: UILabel!
     @IBOutlet weak var Timestamp: UILabel!
     @IBOutlet weak var TestNumber: UILabel!
     @IBOutlet weak var PollFrequency: UILabel!
@@ -37,6 +39,7 @@ class MeterConnect: UIViewController {
 
     }
     @IBAction func stopTestButton(_ sender: UIButton) {
+         let _callFromConstants = Constants()
         // create the alert
         let alert = UIAlertController(title: "End Current Test?", message: "Note: The application will email test results to the address given at the start of the test.", preferredStyle: UIAlertControllerStyle.alert)
         
@@ -44,16 +47,16 @@ class MeterConnect: UIViewController {
         alert.addAction(UIAlertAction(title: "Stop Test", style: UIAlertActionStyle.default, handler: { action in
             
             // get request to stop test.
-           Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(self.TestNumber.text!)", method: .get)
+           Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(self.TestNumber.text!)")
             }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Stop Test & Email Report", style: UIAlertActionStyle.default, handler: { action in
             
             // get request to stop test.
-            Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(self.TestNumber.text!)", method: .get)
+            Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(self.TestNumber.text!)")
             
             // get request to send test report via email.
-            Alamofire.request("http://connect.medeng.com/emailtest.php?testid=\(self.TestNumber.text!)", method: .get)
+            Alamofire.request("http://connect.medeng.com/emailtest.php?testid=\(self.TestNumber.text!)")
         }))
         
         // show the alert
@@ -62,31 +65,24 @@ class MeterConnect: UIViewController {
    
     private var _currentMeter: String!//local variable for current meter
     var currentMeter_2: CurrentMeterData!
-    
-    // get - set for meter id handoff between views
-    var currentMeter: String {
-        get {
-            return _currentMeter
-        } set {
-            _currentMeter = newValue
-        }
-    }
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         currentMeter_2 = CurrentMeterData()//init class
         //using the timer fucntion to loop call
-        Timer.scheduledTimer(withTimeInterval: 1.0,repeats: true) {
+        Timer.scheduledTimer(withTimeInterval: 1.0,repeats: true)
+        {
             timer in
             
-            self.currentMeter_2.downloadMeterDetails {
-            self.updateMeterConnectUI() // calling update UI function
+            self.currentMeter_2.downloadMeterDetails
+            {
+            
+                self.updateMeterConnectUI() // calling update UI function
                 
             }
-
         }
-                    meterName.text = _currentMeter
     }
     //created a function to update the UI
     func updateMeterConnectUI() {

@@ -10,13 +10,18 @@ import Foundation
 import Alamofire
 import UIKit
 
+var CURRENT_METER_URL = ""
+
+
+class Constants{
     
-let LATITUDE = "lat="
-let LONGITUDE = "&lon="
+    //let CURRENT_METER_URL = "http://connect.medeng.com/mostrecentrecord.php"
+
+func updateMeterUrl(meter_url:String) -> String {
+    CURRENT_METER_URL = "http://connect.medeng.com/mostrecentrecord2.php?meter=" + meter_url
+    return CURRENT_METER_URL
+}
+    }
 
 typealias DownloadComplete = () -> ()// type alias for the download complete call in CurrentMeterData
-
-let CURRENT_METER_URL = "http://connect.medeng.com/mostrecentrecord2.php?meter=1"
-
-//let CURRENT_METER_URL = "http://connect.medeng.com/mostrecentrecord.php"
 

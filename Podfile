@@ -8,6 +8,7 @@ target 'Connect_1' do
   # Pods for Connect_1
     pod 'SwiftyJSON'
     pod 'Alamofire', '~> 4.0'
+    pod 'IQKeyboardManagerSwift'
 
 
 
