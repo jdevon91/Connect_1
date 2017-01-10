@@ -34,14 +34,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
 func locationAuthStatus() {
     if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-        currentLocation = locationManager.location
-        Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-        Location.sharedInstance.longitude = currentLocation.coordinate.longitude
-        print(currentLocation.coordinate.latitude)
-               }
+       currentLocation = locationManager.location
+       Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+       Location.sharedInstance.longitude = currentLocation.coordinate.longitude              }
      else {
-        locationManager.requestWhenInUseAuthorization()
-        locationAuthStatus()
+       self.locationManager.requestWhenInUseAuthorization()
+        self.locationAuthStatus()}
     }
-}
 }

@@ -15,6 +15,7 @@ class MeterConnect: UIViewController {
         let getMeterID = MeterID.text
         Alamofire.request("http://connect.medeng.com/disconnect.php?meter=" + getMeterID!)
         //Alamofire.request("http://connect.medeng.com/disconnect.php?meter=2", method: .get )
+        myTimer.invalidate()
         dismiss(animated: true, completion: nil) // kills the current view controller
     }
       @IBOutlet weak var MeterID: UILabel!
@@ -64,6 +65,7 @@ class MeterConnect: UIViewController {
    
     private var _currentMeter: String!//local variable for current meter
     var currentMeter_2: CurrentMeterData!
+    var myTimer = Timer()
   
 
     override func viewDidLoad() {
@@ -71,18 +73,8 @@ class MeterConnect: UIViewController {
         
         currentMeter_2 = CurrentMeterData()//init class
         //using the timer fucntion to loop call
-        Timer.scheduledTimer(withTimeInterval: 1.0,repeats: true)
-        {
-            timer in
-            
-            self.currentMeter_2.downloadMeterDetails
-            {
-            
-                self.updateMeterConnectUI() // calling update UI function
-                
-            }
-        }
-        
+        myTimer = Timer.scheduledTimer(timeInterval: 1.0,target: self, selector: #selector(runTimedCode),userInfo: nil, repeats: true)
+     
     }
     //created a function to update the UI
     func updateMeterConnectUI() {
@@ -118,7 +110,18 @@ class MeterConnect: UIViewController {
         Cum_Gas.text = currentMeter_2.Test_Cumulative_Gas
         
     }
+    
+    func runTimedCode(){
+    
+    self.currentMeter_2.downloadMeterDetails
+    {
+    
+    self.updateMeterConnectUI() // calling update UI function
+    
+    }
+
+    
+    }
 
 }
-
 

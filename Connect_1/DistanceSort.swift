@@ -32,40 +32,42 @@ class DistanceSort {
         var minIndex = 0
         
 //parsing JSON for latitudes and longitudes, then converting them to data type Doubles
+//passing Latitude and longitudes to CLLocation format and storing them in the dbCoordinates array
+
         for i in 0...tracker {
 
             latDouble.append(NSString(string: json["database"][i]["Latitude"].stringValue).doubleValue)
             lonDouble.append(NSString(string: json["database"][i]["Longitude"].stringValue).doubleValue)
             
-            }
-//passing Latitude and longitudes to CLLocation format and storing them in the dbCoordinates array
-        for j in 0...tracker {
-            
-            let coord = CLLocation(latitude: latDouble[j], longitude: lonDouble[j])
-    
+            let coord = CLLocation(latitude: latDouble[i], longitude: lonDouble[i])
             dbCoordinates.append(coord)
             
-        }
+            }
+        
+        latDouble.removeAll()
+        lonDouble.removeAll()
         
         var closest = dbCoordinates[0]
         
-        for k in 0...tracker {
+        for j in 0...tracker {
             
-            if dbCoordinates[k].distance(from: userLocation) < closest.distance(from: userLocation) {
+            if dbCoordinates[j].distance(from: userLocation) < closest.distance(from: userLocation) {
                 
-                minIndex = k
-                closest = dbCoordinates[k]
+                minIndex = j
+                closest = dbCoordinates[j]
             }
         }
-
-        print (userLocation)
-        print(lonDouble)
-        print(latDouble)
-        print(dbCoordinates)
-        print(minIndex+1)
+        
         let callFromConstants2 = Constants()
         callFromConstants2.updateMeterUrl(meter_url: "\(minIndex+1)")
         Alamofire.request("http://connect.medeng.com/standby.php?meter=\(minIndex+1)")
+        
+        dbCoordinates.removeAll()
+        print("dbCoordinates: \(dbCoordinates)")
+        print("minIndex: \(minIndex)")
+        print("Tracker: \(tracker)")
+        print("latDouble: \(latDouble)")
+        print("lonDouble: \(lonDouble)")
 
         completed()
     }
