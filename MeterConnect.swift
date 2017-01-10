@@ -12,8 +12,8 @@ import Alamofire
 class MeterConnect: UIViewController {
     @IBOutlet weak var meterName: UILabel!
     @IBAction func meterConnectBackButtonPressed(_ sender: Any) {
-        var testing = MeterID.text
-        Alamofire.request("http://connect.medeng.com/disconnect.php?meter=" + testing!)
+        let getMeterID = MeterID.text
+        Alamofire.request("http://connect.medeng.com/disconnect.php?meter=" + getMeterID!)
         //Alamofire.request("http://connect.medeng.com/disconnect.php?meter=2", method: .get )
         dismiss(animated: true, completion: nil) // kills the current view controller
     }
@@ -39,13 +39,12 @@ class MeterConnect: UIViewController {
 
     }
     @IBAction func stopTestButton(_ sender: UIButton) {
-         let _callFromConstants = Constants()
         // create the alert
         let alert = UIAlertController(title: "End Current Test?", message: "Note: The application will email test results to the address given at the start of the test.", preferredStyle: UIAlertControllerStyle.alert)
         
         // add the actions (buttons)
         alert.addAction(UIAlertAction(title: "Stop Test", style: UIAlertActionStyle.default, handler: { action in
-            
+        
             // get request to stop test.
            Alamofire.request("http://connect.medeng.com/endtest.php/?testid=\(self.TestNumber.text!)")
             }))
@@ -83,6 +82,7 @@ class MeterConnect: UIViewController {
                 
             }
         }
+        
     }
     //created a function to update the UI
     func updateMeterConnectUI() {

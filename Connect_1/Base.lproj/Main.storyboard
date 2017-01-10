@@ -29,11 +29,24 @@
                                     <segue destination="NAo-V4-fa7" kind="show" identifier="meterid" id="m0z-zf-LoX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kST-0a-VoN">
+                                <rect key="frame" x="20" y="58" width="95" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ET0-LN-kK0"/>
+                                </constraints>
+                                <state key="normal" title="User Location"/>
+                                <connections>
+                                    <action selector="connectToClosestMeter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKe-Av-qgn"/>
+                                    <segue destination="YHc-L6-fgf" kind="showDetail" id="4zN-Yk-4za"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="guB-Ik-fz0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4t3-pT-P88"/>
                             <constraint firstItem="guB-Ik-fz0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8bi-Gm-f4V"/>
+                            <constraint firstItem="kST-0a-VoN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jMh-z4-1uY"/>
+                            <constraint firstItem="kST-0a-VoN" firstAttribute="top" secondItem="guB-Ik-fz0" secondAttribute="bottom" constant="8" id="qSP-G3-HMJ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -309,8 +322,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Stamp" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8n-dD-eOK">
-                                <rect key="frame" x="302" y="41" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8n-dD-eOK">
+                                <rect key="frame" x="394" y="41" width="0.0" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="zQF-zB-qaf"/>
                                 </constraints>
@@ -782,4 +795,7 @@
             <point key="canvasLocation" x="2689.8550724637685" y="142.66304347826087"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4zN-Yk-4za"/>
+    </inferredMetricsTieBreakers>
 </document>
