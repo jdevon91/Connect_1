@@ -65,6 +65,7 @@ class DistanceSort {
         print(minIndex+1)
         let callFromConstants2 = Constants()
         callFromConstants2.updateMeterUrl(meter_url: "\(minIndex+1)")
+        Alamofire.request("http://connect.medeng.com/standby.php?meter=\(minIndex+1)")
 
         completed()
     }
