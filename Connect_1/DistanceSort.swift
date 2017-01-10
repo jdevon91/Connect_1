@@ -27,8 +27,8 @@ class DistanceSort {
         var latDouble = [Double]() // latitude array
         var lonDouble = [Double]() //longitude array
         var dbCoordinates = [CLLocation]() // Coordinate array
-        //let userLocation = CLLocation (latitude: self.userLat!, longitude: self.userLon!)
-        let userLocation = CLLocation (latitude: 52.68, longitude: -113.9)
+        let userLocation = CLLocation (latitude: self.userLat!, longitude: self.userLon!)
+        //let userLocation = CLLocation (latitude: 52.68, longitude: -113.9)
         var minIndex = 0
         
 //parsing JSON for latitudes and longitudes, then converting them to data type Doubles
@@ -47,8 +47,10 @@ class DistanceSort {
             
         }
         
+        var closest = dbCoordinates[0]
+        
         for k in 0...tracker {
-            var closest = dbCoordinates[0]
+            
             if dbCoordinates[k].distance(from: userLocation) < closest.distance(from: userLocation) {
                 
                 minIndex = k
@@ -67,17 +69,5 @@ class DistanceSort {
         completed()
     }
     }
-
-    
-    
-        
-        
- //   let closest = coordinates.min(by:
-  //      { $0.distance(from: userLocation) < $1.distance(from: userLocation) })
-        
-        
-        // print(closest!.coordinate.latitude)
-        
-    
 }
 
