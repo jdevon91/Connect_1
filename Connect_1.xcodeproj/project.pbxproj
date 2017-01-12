@@ -19,6 +19,9 @@
 		88B25B031E132815003BD1D1 /* Connect_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88B25B011E132815003BD1D1 /* Connect_1.xcdatamodeld */; };
 		88B25B051E132815003BD1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B25B041E132815003BD1D1 /* Assets.xcassets */; };
 		88B25B081E132815003BD1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B25B061E132815003BD1D1 /* LaunchScreen.storyboard */; };
+		88BDA2721E25958D007543AC /* UserLocationConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDA2711E25958D007543AC /* UserLocationConfirm.swift */; };
+		88BDA2741E2595ED007543AC /* NewMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDA2731E2595ED007543AC /* NewMeter.swift */; };
+		88BDA2761E26FD91007543AC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88BDA2751E26FD91007543AC /* CoreLocation.framework */; };
 		88FDF3531E132CE60099580E /* MeterConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FDF3521E132CE60099580E /* MeterConnect.swift */; };
 		973984FF2F06BD70E0494A7F /* Pods_Connect_1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A8E51E3564BD8D43EAC1CA /* Pods_Connect_1.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 		88B25B041E132815003BD1D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B25B071E132815003BD1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88B25B091E132815003BD1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88BDA2711E25958D007543AC /* UserLocationConfirm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationConfirm.swift; sourceTree = "<group>"; };
+		88BDA2731E2595ED007543AC /* NewMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMeter.swift; sourceTree = "<group>"; };
+		88BDA2751E26FD91007543AC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		88FDF3521E132CE60099580E /* MeterConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeterConnect.swift; path = ../MeterConnect.swift; sourceTree = "<group>"; };
 		E6E0591CDCCE7050ABCA48DC /* Pods-Connect_1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Connect_1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Connect_1/Pods-Connect_1.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BDA2761E26FD91007543AC /* CoreLocation.framework in Frameworks */,
 				973984FF2F06BD70E0494A7F /* Pods_Connect_1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +66,7 @@
 		0A2F66D63CBCA06BCF94A0EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88BDA2751E26FD91007543AC /* CoreLocation.framework */,
 				46A8E51E3564BD8D43EAC1CA /* Pods_Connect_1.framework */,
 			);
 			name = Frameworks;
@@ -89,6 +97,8 @@
 				886689E11E2068B8000A1AD5 /* MeterID.swift */,
 				88FDF3521E132CE60099580E /* MeterConnect.swift */,
 				881D4F8D1E1C6CC9004CB6FD /* TestController.swift */,
+				88BDA2711E25958D007543AC /* UserLocationConfirm.swift */,
+				88BDA2731E2595ED007543AC /* NewMeter.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -260,6 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BDA2741E2595ED007543AC /* NewMeter.swift in Sources */,
+				88BDA2721E25958D007543AC /* UserLocationConfirm.swift in Sources */,
 				88B25B031E132815003BD1D1 /* Connect_1.xcdatamodeld in Sources */,
 				88B25AFD1E132814003BD1D1 /* ViewController.swift in Sources */,
 				886689E21E2068B8000A1AD5 /* MeterID.swift in Sources */,

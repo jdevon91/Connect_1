@@ -14,8 +14,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBAction func connectToClosestMeter(_ sender: Any) {
         //download meter dictionary from http://connect.medeng.com/service.php
-        let DistanceSort2 = DistanceSort()
-        DistanceSort2.downloadMeterlocation {}
+        let DistanceSortStart = DistanceSort()
+        DistanceSortStart.downloadMeterlocation {}
+        
     }
     
     let locationManager = CLLocationManager()
