@@ -18,7 +18,7 @@ class MeterConnect: UIViewController {
         myTimer.invalidate()
         dismiss(animated: true, completion: nil) // kills the current view controller
     }
-      @IBOutlet weak var MeterID: UILabel!
+    @IBOutlet weak var MeterID: UILabel!
     @IBOutlet weak var Timestamp: UILabel!
     @IBOutlet weak var TestNumber: UILabel!
     @IBOutlet weak var PollFrequency: UILabel!
