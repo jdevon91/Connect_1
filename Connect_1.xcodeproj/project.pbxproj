@@ -94,10 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				88B25AFC1E132814003BD1D1 /* ViewController.swift */,
+				88BDA2711E25958D007543AC /* UserLocationConfirm.swift */,
 				886689E11E2068B8000A1AD5 /* MeterID.swift */,
 				88FDF3521E132CE60099580E /* MeterConnect.swift */,
 				881D4F8D1E1C6CC9004CB6FD /* TestController.swift */,
-				88BDA2711E25958D007543AC /* UserLocationConfirm.swift */,
 				88BDA2731E2595ED007543AC /* NewMeter.swift */,
 			);
 			name = View;
