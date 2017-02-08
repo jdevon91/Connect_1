@@ -17,6 +17,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let DistanceSortStart = DistanceSort()
         DistanceSortStart.downloadMeterlocation {}
     }
+    
     @IBAction func meterIdButton(_ sender: Any) {
         //Create the alert controller.
         let alert = UIAlertController(title: "Meter ID", message: "Enter a Meter ID Number:", preferredStyle: .alert)

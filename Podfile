@@ -9,7 +9,10 @@ target 'Connect_1' do
     pod 'SwiftyJSON'
     pod 'Alamofire', '~> 4.0'
     pod 'IQKeyboardManagerSwift'
-
-
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    pod 'SwiftKeychainWrapper'
 
 end
