@@ -10,7 +10,7 @@
 		881D4F861E1A2A96004CB6FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F851E1A2A96004CB6FD /* Constants.swift */; };
 		881D4F881E1A2F00004CB6FD /* CurrentMeterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */; };
 		881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F8D1E1C6CC9004CB6FD /* TestController.swift */; };
-		8857CF4D1E4BB65400F01A8B /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8857CF4C1E4BB65400F01A8B /* SignInVC.swift */; };
+		8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839E3C51E4BE6D2007E6813 /* SignInVC.swift */; };
 		886689E21E2068B8000A1AD5 /* MeterID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886689E11E2068B8000A1AD5 /* MeterID.swift */; };
 		886689E41E243013000A1AD5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886689E31E243013000A1AD5 /* Location.swift */; };
 		886689E61E24398B000A1AD5 /* DistanceSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886689E51E24398B000A1AD5 /* DistanceSort.swift */; };
@@ -34,7 +34,7 @@
 		881D4F851E1A2A96004CB6FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMeterData.swift; sourceTree = "<group>"; };
 		881D4F8D1E1C6CC9004CB6FD /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
-		8857CF4C1E4BB65400F01A8B /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		8839E3C51E4BE6D2007E6813 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		886689E11E2068B8000A1AD5 /* MeterID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterID.swift; sourceTree = "<group>"; };
 		886689E31E243013000A1AD5 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		886689E51E24398B000A1AD5 /* DistanceSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceSort.swift; sourceTree = "<group>"; };
@@ -103,7 +103,6 @@
 				88FDF3521E132CE60099580E /* MeterConnect.swift */,
 				881D4F8D1E1C6CC9004CB6FD /* TestController.swift */,
 				88BDA2731E2595ED007543AC /* NewMeter.swift */,
-				8857CF4C1E4BB65400F01A8B /* SignInVC.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -111,6 +110,7 @@
 		88AF19931E19F63F00EA1E3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8839E3C51E4BE6D2007E6813 /* SignInVC.swift */,
 				881D4F851E1A2A96004CB6FD /* Constants.swift */,
 				881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */,
 				886689E31E243013000A1AD5 /* Location.swift */,
@@ -282,7 +282,7 @@
 				88B25B031E132815003BD1D1 /* Connect_1.xcdatamodeld in Sources */,
 				88B25AFD1E132814003BD1D1 /* ViewController.swift in Sources */,
 				886689E21E2068B8000A1AD5 /* MeterID.swift in Sources */,
-				8857CF4D1E4BB65400F01A8B /* SignInVC.swift in Sources */,
+				8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */,
 				881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */,
 				886689E41E243013000A1AD5 /* Location.swift in Sources */,
 				88B25AFB1E132814003BD1D1 /* AppDelegate.swift in Sources */,
