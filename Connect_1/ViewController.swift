@@ -12,6 +12,9 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    
     @IBAction func connectToClosestMeter(_ sender: Any) {
         //download meter dictionary from http://connect.medeng.com/service.php
         let DistanceSortStart = DistanceSort()
@@ -26,6 +29,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         alert.addTextField { (textField) in
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        
         //Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "Proceed", style: .default, handler: { [weak alert] (_) in
             let textField = alert!.textFields![0] // Force unwrapping because we know it exists.
@@ -37,33 +41,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.performSegue(withIdentifier: "meterid", sender: alert!.textFields)
         }))
         
-        // 4. Present the alert.
+        //Present the alert.
         self.present(alert, animated: true, completion: nil)
-        
-        
     }
     
-    let locationManager = CLLocationManager()
-    var currentLocation: CLLocation!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-       // locationManager.startMonitoringSignificantLocationChanges()
-        locationAuthStatus()
         
+        //locationManager.startMonitoringSignificantLocationChanges()
+        locationAuthStatus()
     }
 
-func locationAuthStatus() {
-    if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-       currentLocation = locationManager.location
-       Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-       Location.sharedInstance.longitude = currentLocation.coordinate.longitude              }
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            
+            currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+        }
      else {
-       self.locationManager.requestWhenInUseAuthorization()
-        self.locationAuthStatus()}
+            
+            self.locationManager.requestWhenInUseAuthorization()
+            self.locationAuthStatus()
+        }
     }
 }

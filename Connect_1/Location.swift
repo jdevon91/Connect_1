@@ -10,7 +10,9 @@ import Foundation
 import CoreLocation
 import Alamofire
 
+//class for user location.
 class Location {
+    
     static var sharedInstance = Location()
     private init() {}
     

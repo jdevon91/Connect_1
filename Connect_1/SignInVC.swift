@@ -8,36 +8,18 @@
 
 import UIKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBAction func signInBtn(_ sender: Any) {
-        
-        if let email = emailField.text, let pwd = passwordField.text {
-            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
-                if error == nil {
-                    print("Jesse: email user authenticated w/Firebase")
-                }
-                else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
-                        if error != nil {
-                            print("Jesse: email user not authenticated w/Firebase ")
-                        }
-                        else{
-                            print("Jesse: email user authenticated w/Firebase")
-                        }
-                    })
-                }
-            })
-        }
-        
-    }
+    @IBAction func signInBtn(_ sender: Any) {}
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
+    
 }

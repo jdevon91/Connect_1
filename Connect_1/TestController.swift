@@ -11,9 +11,12 @@ import Foundation
 import Alamofire
 
 class TestController: UIViewController {
+    
     @IBAction func TestControllerBackButtonPressed(_ sender: Any) {
-         dismiss(animated: true, completion: nil) // kills the current view controller
+        
+        dismiss(animated: true, completion: nil) // kills the current view controller
     }
+    
     @IBOutlet weak var MeterIDTextField: UITextField!
     @IBOutlet weak var PollRateTextField: UITextField!
     @IBOutlet weak var NameTextField: UILabel!
@@ -23,6 +26,7 @@ class TestController: UIViewController {
     @IBOutlet weak var CCTextField: UITextField!
     @IBOutlet weak var NotesTextField: UITextField!
     @IBAction func startTestButton(_ sender: Any) {
+        
         let parameters: Parameters = [
             "METER": MeterIDTextField.text!,
             "POLLRATE":PollRateTextField.text!,
@@ -32,9 +36,14 @@ class TestController: UIViewController {
             "EMAIL2": CCTextField.text!,
             "NOTES": NotesTextField.text!
         ]
+        
         Alamofire.request("http://connect.medeng.com/submittest.php",method: .post, parameters: parameters)
         
         dismiss(animated: true, completion: nil) // kills the current view controller
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     //Hide keyboard when user touches outside keyboard
@@ -47,9 +56,4 @@ class TestController: UIViewController {
         textField.resignFirstResponder()
         return (true)
     }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        }
 }

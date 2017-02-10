@@ -46,7 +46,8 @@ class MeterID: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var pollFreq: UILabel!
     @IBAction func connect(_ sender: Any) {}
     @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil) // kills the current view controller
+        
+        dismiss(animated: true, completion: nil) //kills the current view controller
         myTimer3.invalidate()
     }
     
@@ -57,37 +58,26 @@ class MeterID: UIViewController, CLLocationManagerDelegate {
         manager2.desiredAccuracy = kCLLocationAccuracyBest
         manager2.startUpdatingLocation()
         myTimer3 = Timer.scheduledTimer(timeInterval: 1.0,target: self, selector: #selector(runTimedCode3),userInfo: nil, repeats: false)
-
-        
     }
 
-    //created a function to update the UI
+    //function to update the UI
     func updateLocationConfirmUi() {
         
         meterId.text = self._meterIdVal
-        
         locationName.text = self._locationNameVal
-        
         latitude.text = self._latitudeVal
-        
         longitude.text = self._longitudeVal
-        
         ipAddress.text = self._ipAddressVal
-        
         port.text = self._portVal
-        
         slaveId.text = self._slaveIdVal
-        
         carrier.text = self._carrierVal
-        
         pollFreq.text = self._pollFrequencyVal
-        
-        }
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         //let span:MKCoordinateSpan = MKCoordinateSpanMake(1, 1)
-        
+    
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(grabUserLat2!, grabUserLon2!)
         
         // let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
@@ -102,7 +92,6 @@ class MeterID: UIViewController, CLLocationManagerDelegate {
         meterAnnotation.title = self._meterIdVal
         meterAnnotation.subtitle = self._locationNameVal
         map2.addAnnotation(meterAnnotation)
-        
     }
     
     func downloadMeterPreviewData(completed: @escaping DownloadComplete) {
@@ -128,20 +117,14 @@ class MeterID: UIViewController, CLLocationManagerDelegate {
             
             completed()
         }
-        
-        
     }
 
     func runTimedCode3(){
         
-        self.downloadMeterPreviewData
-            {
-                
-                self.updateLocationConfirmUi() // calling update UI function
-                
+        self.downloadMeterPreviewData {
+            
+            self.updateLocationConfirmUi() // calling update UI function
         }
-        
-        
     }
 }
 

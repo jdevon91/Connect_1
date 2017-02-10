@@ -16,6 +16,7 @@ class NewMeter: UIViewController {
     let userLongitude = Location.sharedInstance.longitude
     
     @IBAction func cancel(_ sender: Any) {
+        
         dismiss(animated: true, completion: nil) // kills the current view controller
     }
     @IBOutlet weak var locationTextField: UITextField!
@@ -29,6 +30,7 @@ class NewMeter: UIViewController {
     @IBOutlet weak var slaveIdTextfield: UITextField!
     @IBOutlet weak var serviceCarrierTextField: UITextField!
     @IBAction func addMeterButton(_ sender: Any) {
+        
         let addParameters: Parameters = [
             "Location_Name": locationTextField.text!,
             "Address":addressTextField.text!,
@@ -41,20 +43,10 @@ class NewMeter: UIViewController {
             "Slave_ID": slaveIdTextfield.text!,
             "Carrier": serviceCarrierTextField.text!
         ]
+        
         Alamofire.request("http://connect.medeng.com/submitmeter.php",method: .post, parameters: addParameters)
         
         dismiss(animated: true, completion: nil) // kills the current view controller
-    }
-    
-    //Hide keyboard when user touches outside keyboard
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    //Hide keyboard when user hits return
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return (true)
     }
     
     override func viewDidLoad() {
@@ -62,5 +54,18 @@ class NewMeter: UIViewController {
         latitudeTextField.text = "\(userLatitude!)"
         longitudeTextField.text = "\(userLongitude!)"
         super.viewDidLoad()
+    }
+    
+    //Hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        self.view.endEditing(true)
+    }
+    
+    //Hide keyboard when user hits return
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return (true)
     }
 }

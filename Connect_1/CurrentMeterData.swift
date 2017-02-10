@@ -11,6 +11,7 @@ import Alamofire
 import UIKit
 
 class CurrentMeterData {
+    
     var _Meter_ID: String!
     var _Timestamp: String!
     var _Test_ID: String!
@@ -36,7 +37,6 @@ class CurrentMeterData {
     var _USD_TT2: String!
     var _USD_TT3: String!
 
-    
     
     var Meter_ID: String {
         if _Meter_ID == nil {
@@ -210,8 +210,8 @@ class CurrentMeterData {
     
     //function to pull meter data
     func downloadMeterDetails(completed: @escaping DownloadComplete) {
-        //Download Current Meter Data
         
+        //Download current meter data
         let currentMeterURL = URL(string: CURRENT_METER_URL)!
         Alamofire.request(currentMeterURL).responseJSON{ response in
             let result = response.result

@@ -88,13 +88,22 @@
 		88AF19911E19F62B00EA1E3C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				88B25AFA1E132814003BD1D1 /* AppDelegate.swift */,
-				88B25B011E132815003BD1D1 /* Connect_1.xcdatamodeld */,
+				881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */,
+				881D4F851E1A2A96004CB6FD /* Constants.swift */,
+				886689E51E24398B000A1AD5 /* DistanceSort.swift */,
+				886689E31E243013000A1AD5 /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
 		88AF19921E19F63700EA1E3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		88AF19931E19F63F00EA1E3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				88B25AFC1E132814003BD1D1 /* ViewController.swift */,
@@ -103,18 +112,7 @@
 				88FDF3521E132CE60099580E /* MeterConnect.swift */,
 				881D4F8D1E1C6CC9004CB6FD /* TestController.swift */,
 				88BDA2731E2595ED007543AC /* NewMeter.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		88AF19931E19F63F00EA1E3C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
 				8839E3C51E4BE6D2007E6813 /* SignInVC.swift */,
-				881D4F851E1A2A96004CB6FD /* Constants.swift */,
-				881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */,
-				886689E31E243013000A1AD5 /* Location.swift */,
-				886689E51E24398B000A1AD5 /* DistanceSort.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -143,11 +141,13 @@
 				88AF19911E19F62B00EA1E3C /* Model */,
 				88AF19921E19F63700EA1E3C /* View */,
 				88AF19931E19F63F00EA1E3C /* Controller */,
+				88B25AFA1E132814003BD1D1 /* AppDelegate.swift */,
 				88B25AFE1E132814003BD1D1 /* Main.storyboard */,
 				88B25B061E132815003BD1D1 /* LaunchScreen.storyboard */,
 				88B25B091E132815003BD1D1 /* Info.plist */,
 				88A13EA71E4B9F9D00BA90A3 /* GoogleService-Info.plist */,
 				88B25B041E132815003BD1D1 /* Assets.xcassets */,
+				88B25B011E132815003BD1D1 /* Connect_1.xcdatamodeld */,
 			);
 			path = Connect_1;
 			sourceTree = "<group>";
