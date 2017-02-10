@@ -35,6 +35,7 @@
 		881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMeterData.swift; sourceTree = "<group>"; };
 		881D4F8D1E1C6CC9004CB6FD /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		8839E3C51E4BE6D2007E6813 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		8839E3C71E4E47C7007E6813 /* Connect_1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connect_1.entitlements; sourceTree = "<group>"; };
 		886689E11E2068B8000A1AD5 /* MeterID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterID.swift; sourceTree = "<group>"; };
 		886689E31E243013000A1AD5 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		886689E51E24398B000A1AD5 /* DistanceSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceSort.swift; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 		88B25AF91E132814003BD1D1 /* Connect_1 */ = {
 			isa = PBXGroup;
 			children = (
+				8839E3C71E4E47C7007E6813 /* Connect_1.entitlements */,
 				88AF19911E19F62B00EA1E3C /* Model */,
 				88AF19921E19F63700EA1E3C /* View */,
 				88AF19931E19F63F00EA1E3C /* Controller */,
@@ -189,6 +191,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6D459735TJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -414,6 +421,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Connect_1/Connect_1.entitlements;
 				DEVELOPMENT_TEAM = 6D459735TJ;
 				INFOPLIST_FILE = Connect_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -429,6 +437,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Connect_1/Connect_1.entitlements;
 				DEVELOPMENT_TEAM = 6D459735TJ;
 				INFOPLIST_FILE = Connect_1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
