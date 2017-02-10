@@ -103,6 +103,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZB-MT-UYP">
+                                <rect key="frame" x="177" y="546" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpA-iL-CKB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -561,11 +569,12 @@
                     <connections>
                         <outlet property="emailField" destination="PJj-gY-i2Q" id="1iK-ZQ-QTi"/>
                         <outlet property="passwordField" destination="wkQ-i7-Dvl" id="yA0-6z-fBY"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginToMain" id="Twr-vr-5VB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhW-mQ-MhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-888.40579710144937" y="-726.35869565217399"/>
+            <point key="canvasLocation" x="-1771" y="143"/>
         </scene>
         <!--New Meter-->
         <scene sceneID="ngd-tW-agE">

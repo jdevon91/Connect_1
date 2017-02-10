@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import CoreLocation
+import Firebase
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -43,6 +44,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         //Present the alert.
         self.present(alert, animated: true, completion: nil)
+    }
+    @IBAction func signOutBtn(_ sender: Any) {
+        do {
+            try FIRAuth.auth()!.signOut()
+            dismiss(animated: true, completion: nil)
+        } catch {
+            
+        }
     }
     
     override func viewDidLoad() {

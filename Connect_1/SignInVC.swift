@@ -8,9 +8,10 @@
 
 import UIKit
 import Firebase
-import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
+    
+    let loginToMain = "LoginToMain"
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -57,6 +58,15 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
+            
+            if user != nil {
+                
+                self.performSegue(withIdentifier: self.loginToMain, sender: nil)
+            }
+        }
+
         
     }
     
