@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,7 +34,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftKeychainWrapper.xcscheme</key>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,12 +57,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>24712DEB79F57D28F03EA1359679BACF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4DC059E04CBA98AEDDB5C34E02D551E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>83287DE89A34521CCDEB80AC93BFBB84</key>
+		<key>639BB2F19A682FCEF77B295904ACCA7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>685614DC76DA52AF800D3319B5736895</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>699364E9658D24FF319736159FDC959C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9297C44AF3CB1A46EF2B1DB9A0606AFC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>93FABAB54D7DAC12B1D6CBFA8241E552</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F255E7AA09DD069B22CD9DFC04103C19</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,6 +10,8 @@
 		881D4F861E1A2A96004CB6FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F851E1A2A96004CB6FD /* Constants.swift */; };
 		881D4F881E1A2F00004CB6FD /* CurrentMeterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */; };
 		881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F8D1E1C6CC9004CB6FD /* TestController.swift */; };
+		882F87901E526EE700E4CA47 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F878F1E526EE700E4CA47 /* chartViewController.swift */; };
+		882F87B01E57603800E4CA47 /* CustomLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F87AF1E57603800E4CA47 /* CustomLineChart.swift */; };
 		8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839E3C51E4BE6D2007E6813 /* SignInVC.swift */; };
 		886689E21E2068B8000A1AD5 /* MeterID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886689E11E2068B8000A1AD5 /* MeterID.swift */; };
 		886689E41E243013000A1AD5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886689E31E243013000A1AD5 /* Location.swift */; };
@@ -34,6 +36,8 @@
 		881D4F851E1A2A96004CB6FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMeterData.swift; sourceTree = "<group>"; };
 		881D4F8D1E1C6CC9004CB6FD /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		882F878F1E526EE700E4CA47 /* chartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
+		882F87AF1E57603800E4CA47 /* CustomLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLineChart.swift; sourceTree = "<group>"; };
 		8839E3C51E4BE6D2007E6813 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		8839E3C71E4E47C7007E6813 /* Connect_1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Connect_1.entitlements; sourceTree = "<group>"; };
 		886689E11E2068B8000A1AD5 /* MeterID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterID.swift; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		88AF19921E19F63700EA1E3C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				882F87AF1E57603800E4CA47 /* CustomLineChart.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 				881D4F8D1E1C6CC9004CB6FD /* TestController.swift */,
 				88BDA2731E2595ED007543AC /* NewMeter.swift */,
 				8839E3C51E4BE6D2007E6813 /* SignInVC.swift */,
+				882F878F1E526EE700E4CA47 /* chartViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -139,7 +145,6 @@
 		88B25AF91E132814003BD1D1 /* Connect_1 */ = {
 			isa = PBXGroup;
 			children = (
-				8839E3C71E4E47C7007E6813 /* Connect_1.entitlements */,
 				88AF19911E19F62B00EA1E3C /* Model */,
 				88AF19921E19F63700EA1E3C /* View */,
 				88AF19931E19F63F00EA1E3C /* Controller */,
@@ -150,6 +155,7 @@
 				88A13EA71E4B9F9D00BA90A3 /* GoogleService-Info.plist */,
 				88B25B041E132815003BD1D1 /* Assets.xcassets */,
 				88B25B011E132815003BD1D1 /* Connect_1.xcdatamodeld */,
+				8839E3C71E4E47C7007E6813 /* Connect_1.entitlements */,
 			);
 			path = Connect_1;
 			sourceTree = "<group>";
@@ -289,10 +295,12 @@
 				88B25B031E132815003BD1D1 /* Connect_1.xcdatamodeld in Sources */,
 				88B25AFD1E132814003BD1D1 /* ViewController.swift in Sources */,
 				886689E21E2068B8000A1AD5 /* MeterID.swift in Sources */,
+				882F87B01E57603800E4CA47 /* CustomLineChart.swift in Sources */,
 				8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */,
 				881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */,
 				886689E41E243013000A1AD5 /* Location.swift in Sources */,
 				88B25AFB1E132814003BD1D1 /* AppDelegate.swift in Sources */,
+				882F87901E526EE700E4CA47 /* chartViewController.swift in Sources */,
 				886689E61E24398B000A1AD5 /* DistanceSort.swift in Sources */,
 				88FDF3531E132CE60099580E /* MeterConnect.swift in Sources */,
 				881D4F881E1A2F00004CB6FD /* CurrentMeterData.swift in Sources */,

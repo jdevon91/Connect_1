@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (4.3.0)
+  - Charts/Core (3.0.1)
+  - Charts/Realm (3.0.1):
+    - Charts/Core
+    - RealmSwift (~> 1.1)
   - Firebase/Auth (3.12.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.0)
@@ -47,21 +51,26 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
   - IQKeyboardManagerSwift (4.0.8)
-  - SwiftKeychainWrapper (3.0.1)
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - Charts/Realm
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
   - IQKeyboardManagerSwift
-  - SwiftKeychainWrapper
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Firebase: 8e99eb1ff553ad5bcc6072cc3d925bb89c1244d6
   FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
   FirebaseAuth: b436e4ecebe068bf8e8c6e4e29de5756ffe7ee24
@@ -74,9 +83,10 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   IQKeyboardManagerSwift: c04bc9f68473823f825eb44d958fce98d921bead
-  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 41ceba51dc675dc85f1bbbe83855acd0778498ae
+PODFILE CHECKSUM: 74f82c95cfec84a15769c983feefebd9cda77987
 
 COCOAPODS: 1.2.0

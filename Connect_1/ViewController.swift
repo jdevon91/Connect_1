@@ -45,7 +45,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
-    @IBAction func signOutBtn(_ sender: Any) {
+       @IBAction func signOutBtn(_ sender: Any) {
         do {
             try FIRAuth.auth()!.signOut()
             dismiss(animated: true, completion: nil)
@@ -72,7 +72,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             Location.sharedInstance.latitude = currentLocation.coordinate.latitude
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
         }
-     else {
+        else {
             
             self.locationManager.requestWhenInUseAuthorization()
             self.locationAuthStatus()
