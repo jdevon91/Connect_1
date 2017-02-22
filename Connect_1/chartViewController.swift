@@ -23,19 +23,10 @@ class chartViewController: UIViewController {
         
     lineChartView.noDataText = "You need to provide data for the chart."
     CustomLineChart.configureDetailedLineChart(lineChartView)()
+    let trialData = [10.0,32.0,30.0,45.0]
+        let timeData = [1.0,2.0,3.0,4.0]
         
-        ///let formatter = DateFormatter()
-       // formatter.dateFormat = "MM-dd-yyyy"
-       // let time1 = formatter.date(from: "August 6, 2015")
-        //let time2 = formatter.date(from: "August 6, 2015")
-        //let time3 = formatter.date(from: "August 6, 2015")
-        //let time4 = formatter.date(from: "August 6, 2015")
-        
-        let trialData = [1.0,2.0,3.0,4.0]
-        //let timeData = [time1!, time2!, time3!, time4!]
-        let timeData = [4.0,3.0,2.0,1.0]
-        
-        lineChartView.setLineChartData(animate: false, dataSet: trialData, timeDataSet: timeData, color: UIColor.blue)
+        lineChartView.setLineChartData(animate: false, dataSet: trialData, timeDataSet: timeData, color: UIColor.purple)
    
     }
 }

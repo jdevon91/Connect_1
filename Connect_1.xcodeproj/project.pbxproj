@@ -10,6 +10,8 @@
 		881D4F861E1A2A96004CB6FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F851E1A2A96004CB6FD /* Constants.swift */; };
 		881D4F881E1A2F00004CB6FD /* CurrentMeterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */; };
 		881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F8D1E1C6CC9004CB6FD /* TestController.swift */; };
+		882BA55F1E5E2E8E00CDA94E /* RegistrationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882BA55E1E5E2E8E00CDA94E /* RegistrationPage.swift */; };
+		882BA5621E5E38F000CDA94E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882BA5601E5E38F000CDA94E /* Main.storyboard */; };
 		882F87901E526EE700E4CA47 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F878F1E526EE700E4CA47 /* chartViewController.swift */; };
 		882F87B01E57603800E4CA47 /* CustomLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F87AF1E57603800E4CA47 /* CustomLineChart.swift */; };
 		8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839E3C51E4BE6D2007E6813 /* SignInVC.swift */; };
@@ -19,7 +21,6 @@
 		88A13EA81E4B9F9D00BA90A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88A13EA71E4B9F9D00BA90A3 /* GoogleService-Info.plist */; };
 		88B25AFB1E132814003BD1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B25AFA1E132814003BD1D1 /* AppDelegate.swift */; };
 		88B25AFD1E132814003BD1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B25AFC1E132814003BD1D1 /* ViewController.swift */; };
-		88B25B001E132814003BD1D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B25AFE1E132814003BD1D1 /* Main.storyboard */; };
 		88B25B031E132815003BD1D1 /* Connect_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88B25B011E132815003BD1D1 /* Connect_1.xcdatamodeld */; };
 		88B25B051E132815003BD1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B25B041E132815003BD1D1 /* Assets.xcassets */; };
 		88B25B081E132815003BD1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B25B061E132815003BD1D1 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,8 @@
 		881D4F851E1A2A96004CB6FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		881D4F871E1A2F00004CB6FD /* CurrentMeterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentMeterData.swift; sourceTree = "<group>"; };
 		881D4F8D1E1C6CC9004CB6FD /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
+		882BA55E1E5E2E8E00CDA94E /* RegistrationPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPage.swift; sourceTree = "<group>"; };
+		882BA5611E5E38F000CDA94E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		882F878F1E526EE700E4CA47 /* chartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
 		882F87AF1E57603800E4CA47 /* CustomLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLineChart.swift; sourceTree = "<group>"; };
 		8839E3C51E4BE6D2007E6813 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -47,7 +50,6 @@
 		88B25AF71E132814003BD1D1 /* Connect_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connect_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B25AFA1E132814003BD1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B25AFC1E132814003BD1D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		88B25AFF1E132814003BD1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88B25B021E132815003BD1D1 /* Connect_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Connect_1.xcdatamodel; sourceTree = "<group>"; };
 		88B25B041E132815003BD1D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B25B071E132815003BD1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				88B25AFC1E132814003BD1D1 /* ViewController.swift */,
+				882BA55E1E5E2E8E00CDA94E /* RegistrationPage.swift */,
 				88BDA2711E25958D007543AC /* UserLocationConfirm.swift */,
 				886689E11E2068B8000A1AD5 /* MeterID.swift */,
 				88FDF3521E132CE60099580E /* MeterConnect.swift */,
@@ -149,7 +152,7 @@
 				88AF19921E19F63700EA1E3C /* View */,
 				88AF19931E19F63F00EA1E3C /* Controller */,
 				88B25AFA1E132814003BD1D1 /* AppDelegate.swift */,
-				88B25AFE1E132814003BD1D1 /* Main.storyboard */,
+				882BA5601E5E38F000CDA94E /* Main.storyboard */,
 				88B25B061E132815003BD1D1 /* LaunchScreen.storyboard */,
 				88B25B091E132815003BD1D1 /* Info.plist */,
 				88A13EA71E4B9F9D00BA90A3 /* GoogleService-Info.plist */,
@@ -231,7 +234,7 @@
 				88B25B081E132815003BD1D1 /* LaunchScreen.storyboard in Resources */,
 				88A13EA81E4B9F9D00BA90A3 /* GoogleService-Info.plist in Resources */,
 				88B25B051E132815003BD1D1 /* Assets.xcassets in Resources */,
-				88B25B001E132814003BD1D1 /* Main.storyboard in Resources */,
+				882BA5621E5E38F000CDA94E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +302,7 @@
 				8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */,
 				881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */,
 				886689E41E243013000A1AD5 /* Location.swift in Sources */,
+				882BA55F1E5E2E8E00CDA94E /* RegistrationPage.swift in Sources */,
 				88B25AFB1E132814003BD1D1 /* AppDelegate.swift in Sources */,
 				882F87901E526EE700E4CA47 /* chartViewController.swift in Sources */,
 				886689E61E24398B000A1AD5 /* DistanceSort.swift in Sources */,
@@ -311,10 +315,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		88B25AFE1E132814003BD1D1 /* Main.storyboard */ = {
+		882BA5601E5E38F000CDA94E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				88B25AFF1E132814003BD1D1 /* Base */,
+				882BA5611E5E38F000CDA94E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

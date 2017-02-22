@@ -48,33 +48,33 @@ class CustomLineChart: LineChartView {
         self.rightAxis.enabled = false
         self.lineData?.highlightEnabled = false
         self.borderLineWidth = 0
-        self.drawGridBackgroundEnabled = false
+        self.drawGridBackgroundEnabled = true
         self.legend.enabled = false
         self.tintColor = UIColor.clear
-        self.isUserInteractionEnabled = false
+        self.isUserInteractionEnabled = true
+        self.isMultipleTouchEnabled = true
         
         // XAxis configuration
         let xAxisSet = self.xAxis
         xAxisSet.labelCount = 0
         xAxisSet.labelPosition = .bottomInside
-        xAxisSet.labelTextColor = UIColor.clear
-        xAxisSet.gridColor = UIColor.clear
-        xAxisSet.axisLineColor = UIColor.clear
+        xAxisSet.labelTextColor = UIColor.black
+        xAxisSet.gridColor = UIColor.black
+        xAxisSet.axisLineColor = UIColor.black
         
         // YAxis configuration
         let yAxisSetLeft = self.leftAxis
         yAxisSetLeft.labelPosition = .insideChart
-        yAxisSetLeft.labelTextColor = UIColor.clear
+        yAxisSetLeft.labelTextColor = UIColor.black
         yAxisSetLeft.labelCount = 0
-        yAxisSetLeft.zeroLineColor = UIColor.clear
-        yAxisSetLeft.gridColor = UIColor.clear
-        yAxisSetLeft.axisLineColor = UIColor.clear
+        yAxisSetLeft.zeroLineColor = UIColor.black
+        yAxisSetLeft.gridColor = UIColor.black
+        yAxisSetLeft.axisLineColor = UIColor.black
     }
     
     func setLineChartData(animate: Bool, dataSet: [Double], timeDataSet: [Double], color: UIColor) {
         
         // Principle Values
-        
         if animate {
             self.animate(xAxisDuration: 0.4)
         } else {
@@ -89,10 +89,10 @@ class CustomLineChart: LineChartView {
         let set1: LineChartDataSet = LineChartDataSet(values: yVals1, label: nil)
         set1.axisDependency = .left // Line will correlate with left axis values
         set1.setColor(color)
-        set1.circleRadius = 0
-        set1.circleHoleRadius = 0
-        set1.lineWidth = 3
-        set1.mode = .horizontalBezier
+        set1.circleRadius = 3
+        set1.circleHoleRadius = 1
+        set1.lineWidth = 1
+        
         
         var dataSets : [LineChartDataSet] = [LineChartDataSet]()
         dataSets.append(set1)

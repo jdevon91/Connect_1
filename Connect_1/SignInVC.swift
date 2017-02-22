@@ -13,14 +13,15 @@ class SignInVC: UIViewController {
     
     let loginToMain = "LoginToMain"
     
+ 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBAction func signInBtn(_ sender: Any) {
+    @IBAction func signInBtn(_ sender: Any){
         
     FIRAuth.auth()!.signIn(withEmail: emailField.text!, password: passwordField.text!)
     }
     
-    @IBAction func registerBtn(_ sender: AnyObject) {
+    @IBAction func registerBtn(_ sender: Any){
         
         let alert = UIAlertController(title: "Register", message: "Register", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { action in
