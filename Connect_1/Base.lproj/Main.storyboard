@@ -22,114 +22,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocj-LI-jnU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
-                                <color key="backgroundColor" red="0.040636972373724066" green="0.21785692122537667" blue="0.71181769812772722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="z9l-js-rBF"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed by MEDENG Technologies Canada Inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Meb-Ea-438">
-                                <rect key="frame" x="20" y="695" width="285.33333333333331" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Qpg-xH-8pl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZB-MT-UYP">
-                                <rect key="frame" x="334" y="28" width="60" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="q4d-GZ-FrS"/>
-                                </constraints>
-                                <state key="normal" title="Sign Out">
-                                    <color key="titleColor" red="0.26852613687515259" green="0.53941988945007324" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="signOutBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpA-iL-CKB"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MEDENG LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="6vT-xg-AgW">
-                                <rect key="frame" x="20" y="66" width="374" height="230"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="9TN-hm-dh3"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CbP-GH-ZZl">
-                                <rect key="frame" x="20" y="304" width="176" height="272"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="El0-gr-e2j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONNECT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZ8-IK-Pwi">
-                                        <rect key="frame" x="0.0" y="0.0" width="169.33333333333334" height="41"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blA-sF-kJe">
+                                        <rect key="frame" x="165" y="19" width="84" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guB-Ik-fz0">
-                                        <rect key="frame" x="0.0" y="57" width="96" height="42"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                        <state key="normal" title="Meter ID">
-                                            <color key="titleColor" red="0.034999489784240723" green="0.18624687194824219" blue="0.60463732481002808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZB-MT-UYP">
+                                        <rect key="frame" x="8" y="21" width="33" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="33" id="kOS-Eu-g04"/>
+                                            <constraint firstAttribute="height" constant="30" id="nfQ-0i-Ig5"/>
+                                        </constraints>
+                                        <state key="normal" image="logOutBtn">
+                                            <color key="titleColor" red="0.26852613687515259" green="0.53941988945007324" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="meterIdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Di9-X5-Jc8"/>
-                                            <segue destination="NAo-V4-fa7" kind="show" identifier="meterid" id="m0z-zf-LoX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kST-0a-VoN">
-                                        <rect key="frame" x="0.0" y="115" width="157" height="42"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                        <state key="normal" title="User Location">
-                                            <color key="titleColor" red="0.034999489784240723" green="0.18624687194824219" blue="0.60463732481002808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="connectToClosestMeter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKe-Av-qgn"/>
-                                            <segue destination="Nbo-TM-bvK" kind="showDetail" identifier="" id="Oei-52-9y5"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.54000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADMIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppg-uG-CYK">
-                                        <rect key="frame" x="0.0" y="173" width="112.33333333333334" height="41"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vio-oU-tqk">
-                                        <rect key="frame" x="0.0" y="230" width="176" height="42"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                        <state key="normal" title="Add New Meter">
-                                            <color key="titleColor" red="0.034999489784240723" green="0.18624687194824219" blue="0.60463732481002808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="m0E-vq-AtK" kind="showDetail" id="egc-xx-V8D"/>
+                                            <action selector="signOutBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lpA-iL-CKB"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" red="0.3586674929" green="0.50595051049999995" blue="0.70529109239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="272" id="Upl-kJ-YuK"/>
+                                    <constraint firstAttribute="height" constant="59" id="Os3-XR-e2y"/>
+                                    <constraint firstItem="1ZB-MT-UYP" firstAttribute="leading" secondItem="El0-gr-e2j" secondAttribute="leading" constant="8" id="T7H-gW-Vbw"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ZB-MT-UYP" secondAttribute="bottom" constant="8" id="XaN-BG-xRp"/>
                                 </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="bottom" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="NQx-QH-6Kf">
+                                <rect key="frame" x="27" y="108" width="347" height="345"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="EwG-EF-Rxv">
+                                        <rect key="frame" x="24" y="0.0" width="323" height="158"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guB-Ik-fz0">
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="158"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" image="Meter ID1">
+                                                    <color key="titleColor" red="0.034999489784240723" green="0.18624687194824219" blue="0.60463732481002808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="meterIdButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Di9-X5-Jc8"/>
+                                                    <segue destination="NAo-V4-fa7" kind="show" identifier="meterid" id="m0z-zf-LoX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kST-0a-VoN">
+                                                <rect key="frame" x="175" y="0.0" width="148" height="158"/>
+                                                <state key="normal" image="User Location1">
+                                                    <color key="titleColor" red="0.034999489784240723" green="0.18624687194824219" blue="0.60463732481002808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="connectToClosestMeter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKe-Av-qgn"/>
+                                                    <segue destination="Nbo-TM-bvK" kind="showDetail" identifier="" id="Oei-52-9y5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="5h6-VL-oaX">
+                                        <rect key="frame" x="0.0" y="186" width="347" height="159"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vio-oU-tqk">
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="159"/>
+                                                <state key="normal" image="PlusBtn1">
+                                                    <color key="titleColor" red="0.034999489784240723" green="0.18624687194824219" blue="0.60463732481002808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="m0E-vq-AtK" kind="showDetail" id="egc-xx-V8D"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOq-a3-8yP">
+                                                <rect key="frame" x="203" y="0.0" width="144" height="159"/>
+                                                <state key="normal" image="UserBtn1"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.50698316097259521" green="0.65248966217041016" blue="0.83203738927841187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6vT-xg-AgW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3Yy-VF-TK2"/>
-                            <constraint firstItem="CbP-GH-ZZl" firstAttribute="top" secondItem="6vT-xg-AgW" secondAttribute="bottom" constant="8" id="8sy-d4-4n0"/>
-                            <constraint firstItem="ocj-LI-jnU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GZC-u9-J4s"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Meb-Ea-438" secondAttribute="bottom" constant="20" id="IGb-MI-JyF"/>
-                            <constraint firstItem="Meb-Ea-438" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MIh-cY-bkH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Meb-Ea-438" secondAttribute="bottom" constant="20" id="Nhl-SL-27G"/>
-                            <constraint firstItem="6vT-xg-AgW" firstAttribute="top" secondItem="1ZB-MT-UYP" secondAttribute="bottom" constant="8" id="PTU-Jx-cFa"/>
-                            <constraint firstItem="CbP-GH-ZZl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bKx-oN-yb1"/>
-                            <constraint firstItem="6vT-xg-AgW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gvz-L5-tW3"/>
-                            <constraint firstItem="1ZB-MT-UYP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iBf-jG-Xjf"/>
-                            <constraint firstItem="ocj-LI-jnU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qc2-Wi-KMv"/>
-                            <constraint firstItem="1ZB-MT-UYP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="rXY-PB-TEY"/>
-                            <constraint firstAttribute="trailing" secondItem="ocj-LI-jnU" secondAttribute="trailing" id="z6b-Ya-MbU"/>
+                            <constraint firstItem="El0-gr-e2j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DFn-dn-8V3"/>
+                            <constraint firstItem="El0-gr-e2j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FqE-ze-GzV"/>
+                            <constraint firstAttribute="trailing" secondItem="El0-gr-e2j" secondAttribute="trailing" id="Mb8-c4-48c"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-509" y="143"/>
+            <point key="canvasLocation" x="-494.20289855072468" y="150.81521739130437"/>
         </scene>
         <!--User Location Confirm-->
         <scene sceneID="jjY-6s-Qf2">
@@ -2253,11 +2238,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MEDENG LOGO" width="471" height="116"/>
         <image name="MEDENG-LOGO-WHITE" width="471" height="116"/>
+        <image name="Meter ID1" width="125" height="158"/>
+        <image name="PlusBtn1" width="176" height="154"/>
         <image name="Register Button2" width="536" height="108"/>
         <image name="Sign In Button" width="268" height="54"/>
+        <image name="User Location1" width="148" height="158"/>
+        <image name="UserBtn1" width="144" height="159"/>
         <image name="backBtn" width="31" height="29"/>
+        <image name="logOutBtn" width="700" height="612"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hqw-xZ-Flc"/>
