@@ -14,6 +14,8 @@
 		882BA5621E5E38F000CDA94E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882BA5601E5E38F000CDA94E /* Main.storyboard */; };
 		882BA5641E5F4B5800CDA94E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882BA5631E5F4B5800CDA94E /* MessageUI.framework */; };
 		882BA5661E5F5BE100CDA94E /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882BA5651E5F5BE100CDA94E /* webViewController.swift */; };
+		882BA5681E5F87B800CDA94E /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882BA5671E5F87B800CDA94E /* ForgotPassword.swift */; };
+		882BA56A1E5F904F00CDA94E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882BA5691E5F904F00CDA94E /* Assets.xcassets */; };
 		882F87901E526EE700E4CA47 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F878F1E526EE700E4CA47 /* chartViewController.swift */; };
 		882F87B01E57603800E4CA47 /* CustomLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F87AF1E57603800E4CA47 /* CustomLineChart.swift */; };
 		8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839E3C51E4BE6D2007E6813 /* SignInVC.swift */; };
@@ -24,7 +26,6 @@
 		88B25AFB1E132814003BD1D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B25AFA1E132814003BD1D1 /* AppDelegate.swift */; };
 		88B25AFD1E132814003BD1D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B25AFC1E132814003BD1D1 /* ViewController.swift */; };
 		88B25B031E132815003BD1D1 /* Connect_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88B25B011E132815003BD1D1 /* Connect_1.xcdatamodeld */; };
-		88B25B051E132815003BD1D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B25B041E132815003BD1D1 /* Assets.xcassets */; };
 		88B25B081E132815003BD1D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B25B061E132815003BD1D1 /* LaunchScreen.storyboard */; };
 		88BDA2721E25958D007543AC /* UserLocationConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDA2711E25958D007543AC /* UserLocationConfirm.swift */; };
 		88BDA2741E2595ED007543AC /* NewMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BDA2731E2595ED007543AC /* NewMeter.swift */; };
@@ -43,6 +44,8 @@
 		882BA5611E5E38F000CDA94E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		882BA5631E5F4B5800CDA94E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		882BA5651E5F5BE100CDA94E /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
+		882BA5671E5F87B800CDA94E /* ForgotPassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		882BA5691E5F904F00CDA94E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		882F878F1E526EE700E4CA47 /* chartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
 		882F87AF1E57603800E4CA47 /* CustomLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLineChart.swift; sourceTree = "<group>"; };
 		8839E3C51E4BE6D2007E6813 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -55,7 +58,6 @@
 		88B25AFA1E132814003BD1D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B25AFC1E132814003BD1D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88B25B021E132815003BD1D1 /* Connect_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Connect_1.xcdatamodel; sourceTree = "<group>"; };
-		88B25B041E132815003BD1D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B25B071E132815003BD1D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88B25B091E132815003BD1D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88BDA2711E25958D007543AC /* UserLocationConfirm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLocationConfirm.swift; sourceTree = "<group>"; };
@@ -120,14 +122,15 @@
 		88AF19931E19F63F00EA1E3C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				88B25AFC1E132814003BD1D1 /* ViewController.swift */,
+				8839E3C51E4BE6D2007E6813 /* SignInVC.swift */,
 				882BA55E1E5E2E8E00CDA94E /* RegistrationPage.swift */,
+				882BA5671E5F87B800CDA94E /* ForgotPassword.swift */,
+				88B25AFC1E132814003BD1D1 /* ViewController.swift */,
 				88BDA2711E25958D007543AC /* UserLocationConfirm.swift */,
 				886689E11E2068B8000A1AD5 /* MeterID.swift */,
 				88FDF3521E132CE60099580E /* MeterConnect.swift */,
 				881D4F8D1E1C6CC9004CB6FD /* TestController.swift */,
 				88BDA2731E2595ED007543AC /* NewMeter.swift */,
-				8839E3C51E4BE6D2007E6813 /* SignInVC.swift */,
 				882F878F1E526EE700E4CA47 /* chartViewController.swift */,
 				882BA5651E5F5BE100CDA94E /* webViewController.swift */,
 			);
@@ -161,9 +164,9 @@
 				88B25AFA1E132814003BD1D1 /* AppDelegate.swift */,
 				882BA5601E5E38F000CDA94E /* Main.storyboard */,
 				88B25B061E132815003BD1D1 /* LaunchScreen.storyboard */,
+				882BA5691E5F904F00CDA94E /* Assets.xcassets */,
 				88B25B091E132815003BD1D1 /* Info.plist */,
 				88A13EA71E4B9F9D00BA90A3 /* GoogleService-Info.plist */,
-				88B25B041E132815003BD1D1 /* Assets.xcassets */,
 				88B25B011E132815003BD1D1 /* Connect_1.xcdatamodeld */,
 				8839E3C71E4E47C7007E6813 /* Connect_1.entitlements */,
 			);
@@ -240,7 +243,7 @@
 			files = (
 				88B25B081E132815003BD1D1 /* LaunchScreen.storyboard in Resources */,
 				88A13EA81E4B9F9D00BA90A3 /* GoogleService-Info.plist in Resources */,
-				88B25B051E132815003BD1D1 /* Assets.xcassets in Resources */,
+				882BA56A1E5F904F00CDA94E /* Assets.xcassets in Resources */,
 				882BA5621E5E38F000CDA94E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +320,7 @@
 				88FDF3531E132CE60099580E /* MeterConnect.swift in Sources */,
 				881D4F881E1A2F00004CB6FD /* CurrentMeterData.swift in Sources */,
 				881D4F861E1A2A96004CB6FD /* Constants.swift in Sources */,
+				882BA5681E5F87B800CDA94E /* ForgotPassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
