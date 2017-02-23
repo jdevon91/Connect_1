@@ -27,7 +27,10 @@ class RegistrationPage: UIViewController {
             
             if error == nil {
                 
-                FIRAuth.auth()!.signIn(withEmail: self.emailField.text!, password: self.passwordField.text!)
+               // FIRAuth.auth()!.signIn(withEmail: self.emailField.text!, password: self.passwordField.text!)
+                FIRAuth.auth()?.currentUser?.sendEmailVerification(completion: { (error) in
+                    // ...
+                })
             }
         }
     }

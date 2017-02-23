@@ -21,6 +21,8 @@ class SignInVC: UIViewController {
     FIRAuth.auth()!.signIn(withEmail: emailField.text!, password: passwordField.text!)
     }
     
+    @IBAction func registerBtn(_ sender: Any){}
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
