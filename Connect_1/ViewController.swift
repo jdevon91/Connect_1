@@ -10,8 +10,9 @@ import UIKit
 import Alamofire
 import CoreLocation
 import Firebase
+import MessageUI
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MFMailComposeViewControllerDelegate {
     
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -45,7 +46,34 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //Present the alert.
         self.present(alert, animated: true, completion: nil)
     }
-       @IBAction func signOutBtn(_ sender: Any) {
+    
+    @IBAction func phoneBtn(_ sender: Any) {       
+        let url: NSURL = URL(string: "TEL://+14034755566")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func emailBtn(_ sender: Any) {
+        
+        let mailCompose = MFMailComposeViewController()
+        mailCompose.mailComposeDelegate = self
+        mailCompose.setToRecipients(["support@medeng.com"])
+        mailCompose.setCcRecipients(["measurement@medeng.com"])
+        mailCompose.setSubject("MEDENG Connect Support: ")
+        
+        if MFMailComposeViewController.canSendMail()
+        {
+            self.present(mailCompose, animated: true, completion: nil)
+        }
+        else
+        {
+            print("error.")
+        }
+    }
+    
+    @IBAction func webBtn(_ sender: Any) {
+    }
+    
+    @IBAction func signOutBtn(_ sender: Any) {
         do {
             try FIRAuth.auth()!.signOut()
             dismiss(animated: true, completion: nil)
@@ -77,5 +105,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.locationManager.requestWhenInUseAuthorization()
             self.locationAuthStatus()
         }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

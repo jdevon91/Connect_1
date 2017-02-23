@@ -12,6 +12,8 @@
 		881D4F8E1E1C6CC9004CB6FD /* TestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D4F8D1E1C6CC9004CB6FD /* TestController.swift */; };
 		882BA55F1E5E2E8E00CDA94E /* RegistrationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882BA55E1E5E2E8E00CDA94E /* RegistrationPage.swift */; };
 		882BA5621E5E38F000CDA94E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882BA5601E5E38F000CDA94E /* Main.storyboard */; };
+		882BA5641E5F4B5800CDA94E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 882BA5631E5F4B5800CDA94E /* MessageUI.framework */; };
+		882BA5661E5F5BE100CDA94E /* webViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882BA5651E5F5BE100CDA94E /* webViewController.swift */; };
 		882F87901E526EE700E4CA47 /* chartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F878F1E526EE700E4CA47 /* chartViewController.swift */; };
 		882F87B01E57603800E4CA47 /* CustomLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F87AF1E57603800E4CA47 /* CustomLineChart.swift */; };
 		8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8839E3C51E4BE6D2007E6813 /* SignInVC.swift */; };
@@ -39,6 +41,8 @@
 		881D4F8D1E1C6CC9004CB6FD /* TestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestController.swift; sourceTree = "<group>"; };
 		882BA55E1E5E2E8E00CDA94E /* RegistrationPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPage.swift; sourceTree = "<group>"; };
 		882BA5611E5E38F000CDA94E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		882BA5631E5F4B5800CDA94E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		882BA5651E5F5BE100CDA94E /* webViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webViewController.swift; sourceTree = "<group>"; };
 		882F878F1E526EE700E4CA47 /* chartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chartViewController.swift; sourceTree = "<group>"; };
 		882F87AF1E57603800E4CA47 /* CustomLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLineChart.swift; sourceTree = "<group>"; };
 		8839E3C51E4BE6D2007E6813 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882BA5641E5F4B5800CDA94E /* MessageUI.framework in Frameworks */,
 				88BDA2761E26FD91007543AC /* CoreLocation.framework in Frameworks */,
 				973984FF2F06BD70E0494A7F /* Pods_Connect_1.framework in Frameworks */,
 			);
@@ -77,6 +82,7 @@
 		0A2F66D63CBCA06BCF94A0EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				882BA5631E5F4B5800CDA94E /* MessageUI.framework */,
 				88BDA2751E26FD91007543AC /* CoreLocation.framework */,
 				46A8E51E3564BD8D43EAC1CA /* Pods_Connect_1.framework */,
 			);
@@ -123,6 +129,7 @@
 				88BDA2731E2595ED007543AC /* NewMeter.swift */,
 				8839E3C51E4BE6D2007E6813 /* SignInVC.swift */,
 				882F878F1E526EE700E4CA47 /* chartViewController.swift */,
+				882BA5651E5F5BE100CDA94E /* webViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -297,6 +304,7 @@
 				88BDA2721E25958D007543AC /* UserLocationConfirm.swift in Sources */,
 				88B25B031E132815003BD1D1 /* Connect_1.xcdatamodeld in Sources */,
 				88B25AFD1E132814003BD1D1 /* ViewController.swift in Sources */,
+				882BA5661E5F5BE100CDA94E /* webViewController.swift in Sources */,
 				886689E21E2068B8000A1AD5 /* MeterID.swift in Sources */,
 				882F87B01E57603800E4CA47 /* CustomLineChart.swift in Sources */,
 				8839E3C61E4BE6D2007E6813 /* SignInVC.swift in Sources */,
