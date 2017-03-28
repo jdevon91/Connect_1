@@ -18,9 +18,27 @@ class UserLocationConfirm: UIViewController, CLLocationManagerDelegate {
     var manager = CLLocationManager()
     var currentMeter3: DistanceSort!
     var myTimer2 = Timer()
-
-
     
+    //Output Holders
+    var meterIdHolder = ""
+    var locationNameHolder = ""
+    var latitudeHolder = ""
+    var longitudeHolder = ""
+    var ipAddressHolder = ""
+    var portHolder = ""
+    var slaveIdHolder = ""
+    var carrierHolder = ""
+    var pollFrequencyHolder = ""
+    var testControlHolder = ""
+   
+    //Variable Labels
+    @IBOutlet weak var labelOne: UILabel!
+    @IBOutlet weak var labelTwo: UILabel!
+    @IBOutlet weak var labelThree: UILabel!
+    @IBOutlet weak var labelFour: UILabel!
+    @IBOutlet weak var labelFive: UILabel!
+    
+    //Variable outputs
     @IBOutlet weak var meterIdConfirm: UILabel!
     @IBOutlet weak var locationNameConfirm: UILabel!
     @IBOutlet weak var latitudeConfirm: UILabel!
@@ -38,6 +56,40 @@ class UserLocationConfirm: UIViewController, CLLocationManagerDelegate {
         myTimer2.invalidate()
     }
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBAction func indexChanged(_ sender: Any) {
+        
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            labelOne.text = "Meter ID:"
+            labelTwo.text = "Location Name:"
+            labelThree.text = "Latitude:"
+            labelFour.text = "Longitude:"
+            labelFive.text = ""
+            meterIdConfirm.text = meterIdHolder
+            locationNameConfirm.text = locationNameHolder
+            latitudeConfirm.text = latitudeHolder
+            longitudeConfirm.text = longitudeHolder
+            ipAddressConfirm.text = ""
+
+        case 1:
+            labelOne.text = "IP Address:"
+            labelTwo.text = "Port:"
+            labelThree.text = "Slave ID:"
+            labelFour.text = "Carrier:"
+            labelFive.text = "Poll Frequency:"
+            meterIdConfirm.text = ipAddressHolder
+            locationNameConfirm.text = portHolder
+            latitudeConfirm.text = slaveIdHolder
+            longitudeConfirm.text = carrierHolder
+            ipAddressConfirm.text = pollFrequencyHolder
+            
+        default:
+            break
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,23 +101,22 @@ class UserLocationConfirm: UIViewController, CLLocationManagerDelegate {
         currentMeter3 = DistanceSort()
         //using the timer fucntion to loop call
         myTimer2 = Timer.scheduledTimer(timeInterval: 1.0,target: self, selector: #selector(runTimedCode2),userInfo: nil, repeats: false)
-
     }
     
     
-//created a function to update the UI
+//created a function to update the UI, update: changed to update holders which are then called while using the segmented control
     func updateLocationConfirmUi() {
-        
-    meterIdConfirm.text = currentMeter3._meterIdVal
-    locationNameConfirm.text = currentMeter3._locationNameVal
-    latitudeConfirm.text = currentMeter3._latitudeVal
-    longitudeConfirm.text = currentMeter3._longitudeVal
-    ipAddressConfirm.text = currentMeter3._ipAddressVal
-    portConfirm.text = currentMeter3._portVal
-    slaveIdConfirm.text = currentMeter3._slaveIdVal
-    carrierConfirm.text = currentMeter3._carrierVal
-    pollFrequencyConfirm.text = currentMeter3._pollFrequencyVal
-    testControlConfirm.text = currentMeter3._TestControlVal
+     
+    meterIdHolder = currentMeter3._meterIdVal
+    locationNameHolder = currentMeter3._locationNameVal
+    latitudeHolder = currentMeter3._latitudeVal
+    longitudeHolder = currentMeter3._longitudeVal
+    ipAddressHolder = currentMeter3._ipAddressVal
+    portHolder = currentMeter3._portVal
+    slaveIdHolder = currentMeter3._slaveIdVal
+    carrierHolder = currentMeter3._carrierVal
+    pollFrequencyHolder = currentMeter3._pollFrequencyVal
+    testControlHolder = currentMeter3._TestControlVal
   }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

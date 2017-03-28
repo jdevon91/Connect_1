@@ -64,7 +64,7 @@ class CustomLineChart: LineChartView {
         
         // YAxis configuration
         let yAxisSetLeft = self.leftAxis
-        yAxisSetLeft.labelPosition = .insideChart
+        yAxisSetLeft.labelPosition = .outsideChart
         yAxisSetLeft.labelTextColor = UIColor.black
         yAxisSetLeft.labelCount = 0
         yAxisSetLeft.zeroLineColor = UIColor.black
