@@ -4,6 +4,7 @@ PODS:
   - Charts/Realm (3.0.1):
     - Charts/Core
     - RealmSwift (~> 1.1)
+  - Eureka (2.0.1)
   - Firebase/Auth (3.12.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.0)
@@ -61,6 +62,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - Charts/Realm
+  - Eureka
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -71,6 +73,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
+  Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
   Firebase: 8e99eb1ff553ad5bcc6072cc3d925bb89c1244d6
   FirebaseAnalytics: 9c67af0ebeb8d2146c9b4ea2616439affa947b58
   FirebaseAuth: b436e4ecebe068bf8e8c6e4e29de5756ffe7ee24
@@ -87,6 +90,6 @@ SPEC CHECKSUMS:
   RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 74f82c95cfec84a15769c983feefebd9cda77987
+PODFILE CHECKSUM: ffdf741054ec80af4595d71eb2b906806f59361c
 
 COCOAPODS: 1.2.0

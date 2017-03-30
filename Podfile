@@ -14,6 +14,7 @@ target 'Connect_1' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
     pod 'Charts/Realm'
+    pod 'Eureka'
     
 end
 

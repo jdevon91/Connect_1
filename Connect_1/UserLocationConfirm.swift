@@ -99,6 +99,7 @@ class UserLocationConfirm: UIViewController, CLLocationManagerDelegate {
         manager.startUpdatingLocation()
         
         currentMeter3 = DistanceSort()
+    
         //using the timer fucntion to loop call
         myTimer2 = Timer.scheduledTimer(timeInterval: 1.0,target: self, selector: #selector(runTimedCode2),userInfo: nil, repeats: false)
     }
@@ -121,29 +122,36 @@ class UserLocationConfirm: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        //let span:MKCoordinateSpan = MKCoordinateSpanMake(1, 1)
-        
-        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(grabUserLat!, grabUserLon!)
-        
-       // let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
-        
-       // map.setRegion(region, animated: true)
-        
-        self.map.showsUserLocation = true
-        
         let meterAnnotation = MKPointAnnotation()
         
         meterAnnotation.coordinate = CLLocationCoordinate2DMake(currentMeter3!.meterLat, currentMeter3!.meterLong)
-        meterAnnotation.title = currentMeter3._meterIdVal
-        meterAnnotation.subtitle = currentMeter3._locationNameVal
+        meterAnnotation.title = currentMeter3._locationNameVal
+        meterAnnotation.subtitle = "Meter ID " + currentMeter3._meterIdVal
         map.addAnnotation(meterAnnotation)
-    }
+
+        
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(5,5)
+        
+        //let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(grabUserLat!, grabUserLon!)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(meterAnnotation.coordinate, span)
+        
+        //map.setRegion(region, animated: true)
+        
+        self.map.showsUserLocation = true
+        
+            }
     
     func runTimedCode2(){
         
         self.currentMeter3.downloadMeterlocation {
             
             self.updateLocationConfirmUi() // calling update UI function
+            self.meterIdConfirm.text = self.meterIdHolder
+            self.locationNameConfirm.text = self.locationNameHolder
+            self.latitudeConfirm.text = self.latitudeHolder
+            self.longitudeConfirm.text = self.longitudeHolder
+            self.ipAddressConfirm.text = ""
         }
     }
 
